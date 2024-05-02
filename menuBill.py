@@ -480,7 +480,7 @@ class CrudSales(ICrud):
         gotoxy(15,9+line);print(red_color+"Esta seguro de grabar la venta(s/n):")
         gotoxy(54,9+line);procesar = input().lower()
         if procesar == "s":
-            gotoxy(15,10+line);print("😊 Venta Grabada satisfactoriamente 😊"+reset_color)
+            gotoxy(15,10+line);print(" Venta Grabada satisfactoriamente "+reset_color)
             # print(sale.getJson())  
             json_file = JsonFile(path+'/archivos/invoices.json')
             invoices = json_file.read()
@@ -491,7 +491,7 @@ class CrudSales(ICrud):
             json_file = JsonFile(path+'/archivos/invoices.json')
             json_file.save(invoices)
         else:
-            gotoxy(20,10+line);print("🤣 Venta Cancelada 🤣"+reset_color)    
+            gotoxy(20,10+line);print(" Venta Cancelada "+reset_color)    
         time.sleep(2)    
     
 
